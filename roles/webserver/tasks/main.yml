@@ -1,0 +1,8 @@
+---
+# tasks file for webserver
+- name: Instales apache webserver
+  yum: name=httpd state=present update_cache=yes
+
+  notify: 
+   - start-apache
+
